@@ -19,7 +19,7 @@ function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   particles.forEach((p, index) => {
-    ctx.fillStyle = "rgba(255, 255, 255, " + p.life/100 + ")";
+    ctx.fillStyle = "rgba(200, 55, 205, " + p.life/100 + ")";
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
     ctx.fill();

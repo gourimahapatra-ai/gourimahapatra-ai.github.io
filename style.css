@@ -1,45 +1,66 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0f172a;
-  color: #e2e8f0;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* GRADIENT BACKGROUND */
+body {
+  background: linear-gradient(135deg, #003366, #0055aa, #facc15);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+/* CANVAS */
+#trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
 }
 
 /* CONTAINER */
 .container {
+  position: relative;
+  z-index: 1;
   max-width: 1100px;
   margin: auto;
   padding: 40px 20px;
 }
 
-/* HEADER */
-header {
-  background: #0f172a;
-  border-bottom: 1px solid #1e293b;
-}
-
+/* PROFILE */
 .profile-section {
   display: flex;
   align-items: center;
   gap: 40px;
+  flex-wrap: wrap;
 }
 
-.profile-section img {
-  width: 180px;
-  border-radius: 10px;
-  border: 2px solid #334155;
+.profile {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid white;
 }
 
+/* TEXT */
 h1 {
+  font-size: 38px;
   margin: 0;
-  font-size: 36px;
-  color: #ffffff;
 }
 
 h3 {
-  margin-top: 10px;
-  color: #94a3b8;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 p {
@@ -47,28 +68,21 @@ p {
   margin-top: 15px;
 }
 
+/* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background: #2563eb;
-  color: white;
+  background: white;
+  color: #003366;
   text-decoration: none;
-  border-radius: 4px;
-  font-weight: 600;
+  border-radius: 30px;
+  font-weight: bold;
 }
 
 .btn:hover {
-  background: #1d4ed8;
-}
-
-/* SECTIONS */
-section {
-  border-bottom: 1px solid #1e293b;
-}
-
-section.alt {
-  background-color: #111827;
+  background: #facc15;
+  color: black;
 }
 
 /* GRID */
@@ -80,19 +94,8 @@ section.alt {
 }
 
 .card {
-  background: #1e293b;
+  background: rgba(255,255,255,0.1);
   padding: 20px;
-  border-radius: 6px;
-  text-align: center;
-}
-
-/* PROJECTS */
-.project {
-  margin-top: 30px;
-}
-
-/* FOOTER */
-footer {
-  background: #0f172a;
-  text-align: center;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
 }

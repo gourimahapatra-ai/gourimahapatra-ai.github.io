@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0d1117;
+  color: #e6edf3;
+}
+
+header {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.profile {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #58a6ff;
+}
+
+h1 {
+  margin-top: 15px;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  border-bottom: 2px solid #58a6ff;
+  padding-bottom: 10px;
+}
+
+.card {
+  background-color: #161b22;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background-color: #1f2937;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #161b22;
+}
